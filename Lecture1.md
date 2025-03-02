@@ -125,10 +125,9 @@ Let's break the code line by line:
    - (x+1).log(x^2+1)=O(x)
    - 3x^2=O(x^2)
    - O(x^2)+O(x)=O(x^2)
-Give a big-oh estimate for f(x)=(x+1)log(x^2+1)+3x^2.
-   - Break the statement.
-   - log(x^2+1)=2log(x)
-   - (x+1).log(x^2+1)=O(x)
-   - 3x^2=O(x^2)
-   - O(x^2)+O(x)=O(x^2)
+## Big-Omega Notation
+   **Big-Omega notation gives us the best time complexity of an algorithm.**
+   - *Formally,there are constants c,k(witnesses) such that for all x>k:*
+   - *|f(x)|>=c|g(x)|*
+   - *f(x) is Ω(g(x)).*
      
