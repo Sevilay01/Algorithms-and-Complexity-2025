@@ -1,3 +1,3 @@
 # Algorithms-and-Complexity-2025
 
-# This is a briefly written course.
+## This is a briefly written course.
