@@ -92,10 +92,43 @@ Let's break the code line by line:
 ## Big-O Notation
    **Big-O notation shows us the worst time complexity of an algorithm.**
   
-  -  ![Big-O](Complexity.jpg)
+   ![Big-O](Complexity.png)
    
-   *Formally,there are constants c,k(called witnesses) such that for all x>k:*
-   *f:R->R g:R->R*
-   *|f(x)| <= c.|g(x)|*
-   *f(x) is O(g(x)).*
+   - *Formally,there are constants c,k(called witnesses) such that for all x>k:*
+   - *f:R->R g:R->R*
+   - *|f(x)| <= c.|g(x)|*
+   - *f(x) is O(g(x)).*
    
+### Example
+   Show that T(n)=n+5 is O(n).
+   - We need to show T(n)=2n+5<=c*n for all n>=k.
+   - 2n+5<=7n for all n>=1 which is c=7 and k=1.
+### Example
+   f(x)=x^2,g(x)=x^2+2x+1.Show that f(x) is O(g(x)).
+   - x^2<=x^2+2x+1 for c=1,k=0.
+   - x^2<=**1**x^2+2x+1
+### Example
+   Show that n^2!=O(n).
+   - Suppose n^2=O(n)
+   - Then for all n>=k
+   - |n^2|<=c|n|
+   - |n|<=c
+   - Impossible,because c and k are constant but n grows.
+### Example 
+   Show that n!=O(n^n)
+   - 1.2.3....n<=n.n.n.n...n=n^n
+   - For c=1 and k=1,n!=O(n^n)
+### Example
+   Give a big-oh estimate for f(x)=(x+1)log(x^2+1)+3x^2
+   - Break the statement.
+   - log(x^2+1)=2log(x)
+   - (x+1).log(x^2+1)=O(x)
+   - 3x^2=O(x^2)
+   - O(x^2)+O(x)=O(x^2)
+Give a big-oh estimate for f(x)=(x+1)log(x^2+1)+3x^2.
+   - Break the statement.
+   - log(x^2+1)=2log(x)
+   - (x+1).log(x^2+1)=O(x)
+   - 3x^2=O(x^2)
+   - O(x^2)+O(x)=O(x^2)
+     
