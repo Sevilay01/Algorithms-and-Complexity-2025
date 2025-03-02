@@ -100,7 +100,7 @@ Let's break the code line by line:
    - *f(x) is O(g(x)).*
    
 ### Example
-   Show that T(n)=n+5 is O(n).
+    Show that T(n)=n+5 is O(n).
    - We need to show T(n)=2n+5<=c*n for all n>=k.
    - 2n+5<=7n for all n>=1 which is c=7 and k=1.
 ### Example
@@ -108,18 +108,18 @@ Let's break the code line by line:
    - x^2<=x^2+2x+1 for c=1,k=0.
    - x^2<=**1**x^2+2x+1
 ### Example
-   Show that n^2!=O(n).
+    Show that n^2!=O(n).
    - Suppose n^2=O(n)
    - Then for all n>=k
    - |n^2|<=c|n|
    - |n|<=c
    - Impossible,because c and k are constant but n grows.
 ### Example 
-   Show that n!=O(n^n)
+    Show that n!=O(n^n)
    - 1.2.3....n<=n.n.n.n...n=n^n
    - For c=1 and k=1,n!=O(n^n)
 ### Example
-   Give a big-oh estimate for f(x)=(x+1)log(x^2+1)+3x^2
+    Give a big-oh estimate for f(x)=(x+1)log(x^2+1)+3x^2
    - Break the statement.
    - log(x^2+1)=2log(x)
    - (x+1).log(x^2+1)=O(x)
@@ -127,7 +127,26 @@ Let's break the code line by line:
    - O(x^2)+O(x)=O(x^2)
 ## Big-Omega Notation
    **Big-Omega notation gives us the best time complexity of an algorithm.**
+![Big-Omega](ComplexityOmega.png)
+   
    - *Formally,there are constants c,k(witnesses) such that for all x>k:*
    - *|f(x)|>=c|g(x)|*
    - *f(x) is Ω(g(x)).*
-     
+
+### Example
+      8x^3+5x+7 is Ω(x^3).
+   - 8x^3+5x+7>=8x^3
+   - for c=8 and k=1.
+## Some Notes
+  - All comparison-based *searching algorithms* have a Ω(logN).
+  - All comparison-based *sorting algorithms* have a Ω(NlogN).
+## Big-Theta Notation(Same Order)
+   **f(x)=O(g(x)) and f(x)=Ω(g(x))**
+   - *Formally if there are positive constants c1,c2 and k such that*
+   - *c1.g(n)<=f(n)<=c2(g(n)) for all n>=k
+## Last Note
+  logn-> sqrt(n) -> n -> nlogn -> n^2 -> 2^n -> n!
+  
+  ----------------------------------------------->
+            
+            Grows Faster!
