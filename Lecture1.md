@@ -11,7 +11,7 @@ An *algorithm* is the solving procedure for a specified problem.Each problem can
    - Because,*the amount of steps* gives us the time complexity for an algorithm.
 ## Example
   Finding the sum of an array of numbers:
-  ```
+  ```C++
   int Sum(int A[],int N){
      int sum=0;
      int i=0;
@@ -42,7 +42,7 @@ Let's break the code line by line:
   - Linear time complexity is usually used when we have *loops*.For example,in above example we used while loop.It had *T(n)=N* time complexity,i.e,linear time complexity.
 ## Example
    Nested for loops:
-```
+```C++
    for(int i=1;i<=N;i++){
        for(int j=1;j<=N;j++){
         cout<<"Nested"<<endl;
@@ -64,7 +64,7 @@ Let's break the code line by line:
   - Matrix multiplication has 3 nested for loops.In addition inside of second loop ,there is a constant declaration.So it has N^3+N^2 time complexity.Let's see why:
 ## Example
    Matrix Multiplication:
-```
+```C++
     for(int i=0;i<N;i++){
       for(int j=0;j<N;j++){
         C[i][j]=0;
